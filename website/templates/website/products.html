@@ -1,0 +1,143 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Produse{% endblock %}
+
+{% block content %}
+<style>
+.service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-card .btn {
+    background-color: #006400; /* Change background color on hover */
+    color: #FFFFFF;
+    font-style: italic;
+    border-color: #fff;
+    border-width: 2.5px;
+    border-radius: 25px;
+}
+
+.service-card .card-body {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card h2 {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+.service-card p {
+    font-size: 0.9em;
+    color: #666;
+    text-align: justify;
+    padding: 0 15px 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 2;
+}
+
+.carousel.slide {
+    height: 450px;
+}
+
+
+
+
+
+
+
+</style>
+
+<div class="container my-4">
+    <h1 class="text-gray-800 font-medium text-center text-2xl mb-6">Produse</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-5 service-card">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'website/images/capsune/img1.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'website/images/capsune/img2.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'website/images/capsune/img3.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'website/images/capsune/img4.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'website/images/capsune/img5.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'website/images/capsune/img6.jpeg' %}" class="d-block w-100"
+                                 alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Căpşune</h2>
+                    <a class="btn" href="https://wa.me/40754431908" target="_blank"><span
+                            class='fa fa-shopping-basket'></span> Comandă</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mt-5 mb-3">Ofertă "<strong>Căpşune Mârșani</strong>"</h2>
+            <p>Înainte de a începe cumpărăturile virtuale, te rugăm să citești cu atenție următoarele informații:</p>
+            <ul>
+                <li><strong>Căpşune Mârșani</strong> este o platformă GRATUITĂ care facilitează contactul între client
+                    și micul
+                    producător, fără ca un alt terț să intervină în vânzare;
+                </li>
+                <li>După ce selectați produsele dorite vă rugăm să intrați în contact cu producătorul prin telefon, mail
+                    sau pe Facebook.
+                </li>
+                <li>Vă rugăm să verificați disponibilitatea de livrare a producătorului, deoarece sunt producători care
+                    nu fac livrări la domiciliul clientului. De asemenea tot prin discuții cu producătorii puteți
+                    stabili modul de livrare/ de preluare a produselor;
+                </li>
+                <li>Dacă vă hotărâți să vă preluați singuri produsele, vă recomandăm să întrebați și prietenii dacă au
+                    nevoie de ceva. De asemenea folosiți modulul (Direcții) pentru a afla distanța până la producător și
+                    să identificați care producători sunt mai apropiați de voi.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

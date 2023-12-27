@@ -1,0 +1,43 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center text-3xl mt-20"> Contactează-ne!</h1>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h4>Adresă:</h4>
+            <p>Str. Principala<br>Mârșani, Dolj, Romania</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Detalii de contact:</h4>
+            <p>Email: bogdangugu@yahoo.com<br>Telefon: +(40) 754-431-908</p>
+            <div class="d-flex align-items-center">
+                <p class="mb-0 mr-8">Scrie-ne pe WhatsApp:</p>
+                <a href="https://wa.me/40754431908" target="_blank">
+                    <img src="{% static 'website/images/whatsapp-logo.png' %}" alt="WhatsApp" width="30" height="30"
+                         style="margin-left:15px;"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-3 mt-md-0">
+            <h4>Program:</h4>
+            <p>Luni - Vineri: 9:00 - 17:00<br>Weekends: Inchis</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h4>Locație:</h4>
+            <!--Replace 'q' parameter with your address-->
+            <div style="position:relative;overflow:hidden;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2869.028164478865!2d24.0006875!3d44.020812500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40acc54ec41e8465%3A0xcbab5a97b71bd167!2zQ8SDcMiZdW5lIE3DonLImWFuaQ!5e0!3m2!1sen!2sro!4v1703678621891!5m2!1sen!2sro"
+                        width="1400" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
